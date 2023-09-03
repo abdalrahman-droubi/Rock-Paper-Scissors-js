@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="ChooseSection" id="ChooseSection">
+          <h1>Choose:</h1>
+        <div class="img">
+          <span onclick="handleResult('Rock')">
+            <img src="./Rock.svg" alt="Rock" />
+            <p>Rock</p>
+          </span>
+          <span onclick="handleResult('Paper')">
+            <img src="./Paper.svg" alt="Paper" />
+            <p>Paper</p>
+          </span>
+          <span onclick="handleResult('Scissors')">
+            <img src="./Scissors.svg" alt="Scissors" />
+            <p>Scissors</p>
+          </span>
+        </div>
+      </div>
+      <div class="resultSection" id="resultSection">
+        <h1 id="resultSectionTitle"></h1>
+      <div class="img">
+        <span >
+          <img src=""  id="resultSectionImg1"/>
+        </span>
+        <span >
+          <img src="" id="resultSectionImg2"/>
+        </span>
+      </div>
+    </div>
+    <button class="btn" id="againBtn"> play again </button>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
