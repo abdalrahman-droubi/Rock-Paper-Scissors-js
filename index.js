@@ -11,26 +11,23 @@ function handleResult(userChoice) {
   resultSection.style.display = "block";
   againBtn.style.display = "block";
   let computerChoice = computerChoices[Math.floor(Math.random() * 3)];
+  resultSectionImg1.src = `./assets/${userChoice}.svg`;
+  resultSectionImg2.src = `./assets/${computerChoice}.svg`;
+  resultSectionImg2.style.transform = "scaleX(-1)";
   if (
     (computerChoice == "Rock" && userChoice == "Paper") ||
     (computerChoice == "Scissors" && userChoice == "Rock") ||
     (computerChoice == "Paper" && userChoice == "Scissors")
   ) {
     resultSectionTitle.textContent = "YOU WIN!";
-    resultSectionImg1.src = `./${userChoice}.svg`;
-    resultSectionImg2.src = `./${computerChoice}.svg`;
   } else if (
     (computerChoice == "Paper" && userChoice == "Rock") ||
     (computerChoice == "Rock" && userChoice == "Scissors") ||
     (computerChoice == "Scissors" && userChoice == "Paper")
   ) {
     resultSectionTitle.textContent = `YOU LOST!`;
-    resultSectionImg1.src = `./${userChoice}.svg`;
-    resultSectionImg2.src = `./${computerChoice}.svg`;
   } else {
     resultSectionTitle.textContent = `YOU TIED!`;
-    resultSectionImg1.src = `./${userChoice}.svg`;
-    resultSectionImg2.src = `./${computerChoice}.svg`;
   }
 }
 
@@ -39,6 +36,6 @@ againBtn.addEventListener("click", () => {
   resultSection.style.display = "none";
   againBtn.style.display = "none";
   resultSectionTitle.textContent = "";
-    resultSectionImg1.src = ``;
-    resultSectionImg2.src = ``;
+  resultSectionImg1.src = ``;
+  resultSectionImg2.src = ``;
 });
